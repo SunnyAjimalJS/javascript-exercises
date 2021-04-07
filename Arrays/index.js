@@ -12,5 +12,17 @@ let users = [
 for (let { name, email } of users) {
   names.push(name);
 }
+// console.log(names);
 
-console.log(names);
+// (* Array Tricks *) //
+// Removing Falsy Values:
+let arr = ["0", "yellow", "", NaN, 1, true, undefined, "orange", false];
+arr = arr.filter(Boolean);
+arr = arr.filter((a) => Boolean(a));
+arr = arr.filter((a) => !!a);
+// console.log(arr);
+
+// Get random value from an array:
+const colors = ["yellow", "orange", "blue", "purple", "green"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+console.log(randomColor);
