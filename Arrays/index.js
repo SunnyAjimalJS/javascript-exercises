@@ -74,11 +74,26 @@ for (let { name, email } of users) {
 // console.log(names); // Output: [ 'John', 'Jason', 'Jeremy', 'Jacob' ]
 
 // 12. Concat:
-let concatArray = [1, 2];
+const concatArray = [1, 2];
 let concatenatedArray = concatArray.concat([3], [4, 5]);
 // console.log(concatenatedArray); // Output: [ 1, 2, 3, 4, 5 ]
 
 // 13. CopyWithin:
-let arrayToCopyFrom = [1, 2, 3, 4, 5];
+const arrayToCopyFrom = [1, 2, 3, 4, 5];
 let copiedArray = arrayToCopyFrom.copyWithin(0, 2);
-console.log(copiedArray); // Output: [ 3, 4, 5, 4, 5 ]
+// console.log(copiedArray); // Output: [ 3, 4, 5, 4, 5 ]
+
+// 13. Every:
+const arrayToCheck = [1, 30, 40];
+const checkedArray = arrayToCheck.every((val) => val > 0);
+// console.log(checkedArray); // Output: true
+
+// 14. Fill:
+const arrayToFill = [1, 2, 3, 4];
+let filledArray = arrayToFill.fill("x", 1, 3);
+// console.log(filledArray); // Output: [ 1, 'x', 'x', 4 ]
+
+// 15. Filter:
+const arrayToFiler = [1, 2, 5, 6, 7, 10];
+let filteredArray = arrayToFiler.filter((val) => val >= 5);
+// console.log(filteredArray); // Output: [ 5, 6, 7, 10 ]
