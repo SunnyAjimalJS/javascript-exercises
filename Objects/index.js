@@ -4,6 +4,5 @@ const object = Object.assign({}, array);
 // console.log(object); // Output: { '0': 'Allen', '1': 24 }
 
 // Add items to an object from an array using the spread operator:
-const arrayTwo = ["Allen", 24];
 const objectTwo = { ...array };
 // console.log(objectTwo); // Output: { '0': 'Allen', '1': 24 }
