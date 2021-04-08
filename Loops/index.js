@@ -16,3 +16,11 @@ for (let i = 0, len = arrTwo.length; i < len; i++) {
   newArr.push(Math.sqrt(arrTwo[i]));
 }
 // console.log(newArr);
+
+// Using a forEach loop to retrn a new array of square rooted values:
+let arrThree = [4, 9, 16, 25];
+let newArrTwo = [];
+arrThree.forEach(function (val) {
+  newArrTwo.push(Math.sqrt(val));
+});
+// console.log(newArrTwo);
