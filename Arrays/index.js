@@ -46,3 +46,14 @@ let a = 1,
 [a, b] = [b, a];
 // console.log(a);
 // console.log(b);
+
+// (* Array Methods *) //
+// Slice - The slice() method selects a part of an array and returns the element/s in a new array:
+const arrayToSlice = ["Array", "Slicing", "Example"];
+let slicedArray = arrayToSlice.slice(1, 2);
+console.log(slicedArray);
+
+// Map = The map() method creates a new array with the results of calling a function for every array element:
+const arrayToMap = [1, 4, 9, 16];
+let mappedArray = arrayToMap.map((x) => x * 2);
+console.log(mappedArray);
