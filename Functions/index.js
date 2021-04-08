@@ -1,4 +1,4 @@
-// (* Determine if the permutation is of a pallindrome *)
+// (* Determine if the permutation is of a pallindrome *) //
 function pallindromePermutation(s) {
   // Detect if string is a permutation of a pallindrome
   // Pallindrome (even) all letters have 2 iterations
@@ -23,7 +23,7 @@ function pallindromePermutation(s) {
 }
 console.log(pallindromePermutation("rcaerca"));
 
-// (* Determine if the permutation is of a pallindrome - a different way *)
+// (* Determine if the permutation is of a pallindrome - a different way *) //
 function palindromePermutation(inputString) {
   // create a set to track characters we've seen
   const charSet = new Set();
