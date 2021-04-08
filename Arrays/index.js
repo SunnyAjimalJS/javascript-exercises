@@ -97,3 +97,23 @@ let filledArray = arrayToFill.fill("x", 1, 3);
 const arrayToFiler = [1, 2, 5, 6, 7, 10];
 let filteredArray = arrayToFiler.filter((val) => val >= 5);
 // console.log(filteredArray); // Output: [ 5, 6, 7, 10 ]
+
+// 16. Find:
+const arrayToFindFrom = [1, 2, 5, 6, 7, 10];
+let itemFromArrayUsingFind = arrayToFindFrom.find((val) => val > 7);
+// console.log(itemFromArrayUsingFind); // Output: 10
+
+// 17. Flat & use Infinity:
+const arrayToFlatten = [1, [2, [3, [4]]]];
+let flattenedArray = arrayToFlatten.flat(Infinity);
+// console.log(flattenedArray); // Output: [ 1, 2, 3, 4 ]
+
+// 18. Includes:
+const checkArrayUsingInclude = [1, 2, 3];
+let arrayCheckedUsingInclude = checkArrayUsingInclude.includes(3);
+// console.log(arrayCheckedUsingInclude); // Output: true
+
+// 19. IndexOf:
+const findIndexOfArray = [1, 2, 3, 4, 5];
+let foundIndex = findIndexOfArray.indexOf(3);
+// console.log(foundIndex); // Output: 2
