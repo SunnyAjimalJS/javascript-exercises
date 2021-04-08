@@ -73,4 +73,12 @@ for (let { name, email } of users) {
 }
 // console.log(names); // Output: [ 'John', 'Jason', 'Jeremy', 'Jacob' ]
 
-// 12.
+// 12. Concat:
+let concatArray = [1, 2];
+let concatenatedArray = concatArray.concat([3], [4, 5]);
+// console.log(concatenatedArray); // Output: [ 1, 2, 3, 4, 5 ]
+
+// 13. CopyWithin:
+let arrayToCopyFrom = [1, 2, 3, 4, 5];
+let copiedArray = arrayToCopyFrom.copyWithin(0, 2);
+console.log(copiedArray); // Output: [ 3, 4, 5, 4, 5 ]
