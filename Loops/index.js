@@ -17,10 +17,18 @@ for (let i = 0, len = arrTwo.length; i < len; i++) {
 }
 // console.log(newArr);
 
-// Using a forEach loop to retrn a new array of square rooted values:
+// Using a forEach loop to return a new array of square rooted values:
 let arrThree = [4, 9, 16, 25];
 let newArrTwo = [];
 arrThree.forEach(function (val) {
   newArrTwo.push(Math.sqrt(val));
 });
 // console.log(newArrTwo);
+
+// Using a for of loop to return a new array of square rooted values:
+let arrFour = [4, 9, 16, 25];
+let newArrThree = [];
+for (let val of arrFour) {
+  newArrThree.push(Math.sqrt(val));
+}
+// console.log(newArrThree);
