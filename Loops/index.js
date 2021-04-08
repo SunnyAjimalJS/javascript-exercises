@@ -7,4 +7,12 @@ let arr = [4, 9, 16, 25];
 for (let i = 0, len = arr.length; i < len; i++) {
   arr[i] = Math.sqrt(arr[i]);
 }
-console.log(arr);
+// console.log(arr);
+
+// Using a for loop to return a new array of square rooted values:
+let arrTwo = [4, 9, 16, 25];
+let newArr = [];
+for (let i = 0, len = arrTwo.length; i < len; i++) {
+  newArr.push(Math.sqrt(arrTwo[i]));
+}
+// console.log(newArr);
