@@ -1,4 +1,16 @@
-// Using flatMap to flatten an array to single elements:
-const input = ["blue, red, yellow", "apple, orange"];
-const flattenedArray = input.flatMap((d) => d.split(","));
-// console.log(flattenedArray); // Output: [ 'blue', ' red', ' yellow', 'apple', ' orange' ]
+// 1. (* Print the first non repeated character from a string *) //
+const firstNonRepeatedCharacter = function (string) {
+  let chars = string.split("");
+  for (let i = 0; i < string.length; i++) {
+    if (
+      chars.filter(function (j) {
+        return j == string.charAt(i);
+      }).length == 1
+    )
+      return string.charAt(i);
+  }
+};
+console.log(firstNonRepeatedCharacter("aabbcddd")); // Output: c
+console.log(firstNonRepeatedCharacter("abbcddd")); // Output: a
+
+// 2. (* Find the missing numbers in a given integer array *) //
