@@ -108,38 +108,43 @@ const arrayToFlatten = [1, [2, [3, [4]]]];
 let flattenedArray = arrayToFlatten.flat(Infinity);
 // console.log(flattenedArray); // Output: [ 1, 2, 3, 4 ]
 
-// 18. Includes:
+// 18. Using flatMap to flatten an array to single elements:
+const input = ["blue, red, yellow", "apple, orange"];
+const flattenedArray = input.flatMap((d) => d.split(","));
+// console.log(flattenedArray); // Output: [ 'blue', ' red', ' yellow', 'apple', ' orange' ]
+
+// 19. Includes:
 const checkArrayUsingInclude = [1, 2, 3];
 let arrayCheckedUsingInclude = checkArrayUsingInclude.includes(3);
 // console.log(arrayCheckedUsingInclude); // Output: true
 
-// 19. IndexOf:
+// 20. IndexOf:
 const findIndexOfArray = [1, 2, 3, 4, 5];
 let foundIndex = findIndexOfArray.indexOf(3);
 // console.log(foundIndex); // Output: 2
 
-// 20. Copy array using the spread operator:
+// 21. Copy array using the spread operator:
 let arrToBeCopied = [1, 2, 3];
 let newCopiedArray = [...arrToBeCopied];
 // console.log(newCopiedArray); // Output: [ 1, 2, 3 ]
 
-// 21. Merge arrays using the spread operator:
+// 22. Merge arrays using the spread operator:
 let fruits = ["Strawberries", "Oranges"];
 let vegetables = ["Broccoli", "Spinach"];
 let fruitsAndVegetables = [...fruits, ...vegetables];
 // console.log(fruitsAndVegetables); // Output: [ 'Strawberries', 'Oranges', 'Broccoli', 'Spinach' ]
 
-// 22. Remove Duplicates in an array using the spread operator and Set:
+// 23. Remove Duplicates in an array using the spread operator and Set:
 let arrayWithDuplicates = [1, 2, 2, 2, 3, 4];
 let arrWithNoDuplicates = [...new Set(arrayWithDuplicates)];
 // console.log(arrWithNoDuplicates); // Output: [ 1, 2, 3, 4 ]
 
-// 23. Spreading an array as an argument:
+// 24. Spreading an array as an argument:
 let numberArray = [1, 2, 3, 4, 5];
 let minNumFromNumberArray = Math.min(...numberArray);
 // console.log(minNumFromNumberArray); // Output: 1
 
-// 24. Convert a string to characters using the spread operator:
+// 25. Convert a string to characters using the spread operator:
 let string = "Hello";
 let stringConvertedToArr = [...string];
 // console.log(stringConvertedToArr); // Output: [ 'H', 'e', 'l', 'l', 'o' ]
