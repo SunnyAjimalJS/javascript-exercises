@@ -31,7 +31,30 @@ const missingNumber = Array.from(Array(max - min), (v, i) => i + min).filter(
 function checkRotationStrings(string, rotated) {
   return string.length === rotated.length && rotated.repeat(2).includes(string);
 }
-console.log(checkRotationStrings("apple", "elppa")); // Output: false
-console.log(checkRotationStrings("apple", "leapp")); // Output: true
-console.log(checkRotationStrings("hello", "lohel")); // Output: true
-console.log(checkRotationStrings("hello", "ohell")); // Output: true
+// console.log(checkRotationStrings("apple", "elppa")); // Output: false
+// console.log(checkRotationStrings("apple", "leapp")); // Output: true
+// console.log(checkRotationStrings("hello", "lohel")); // Output: true
+// console.log(checkRotationStrings("hello", "ohell")); // Output: true
+
+// 4. (* Generate all permutations of a string - ES6 *)
+// - First check is the strings length
+// - Then if it's greater than 2, then return an array with the string permutations
+// - With the string being passed, use split("") then reduce() to pass acc, letter and i for concat to run stringPermutations on that string, slice it and map through each value and letter and create the permutations of that string
+const stringPermutations = (str) => {
+  if (str.length <= 2) return str.length === 2 ? [str, str[1] + str[0]] : [str];
+  return str
+    .split("")
+    .reduce(
+      (acc, letter, i) =>
+        acc.concat(
+          stringPermutations(str.slice(0, i) + str.slice(i + 1)).map(
+            (val) => letter + val
+          )
+        ),
+      []
+    );
+};
+// console.log(stringPermutations("abc"));
+// console.log(stringPermutations("tree"));
+// console.log(stringPermutations("ab"));
+// console.log(stringPermutations("a"));
