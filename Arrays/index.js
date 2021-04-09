@@ -122,3 +122,24 @@ let foundIndex = findIndexOfArray.indexOf(3);
 let arrToBeCopied = [1, 2, 3];
 let newCopiedArray = [...arrToBeCopied];
 // console.log(newCopiedArray); // Output: [ 1, 2, 3 ]
+
+// 21. Merge arrays using the spread operator:
+let fruits = ["Strawberries", "Oranges"];
+let vegetables = ["Broccoli", "Spinach"];
+let fruitsAndVegetables = [...fruits, ...vegetables];
+// console.log(fruitsAndVegetables); // Output: [ 'Strawberries', 'Oranges', 'Broccoli', 'Spinach' ]
+
+// 22. Remove Duplicates in an array using the spread operator and Set:
+let arrayWithDuplicates = [1, 2, 2, 2, 3, 4];
+let arrWithNoDuplicates = [...new Set(arrayWithDuplicates)];
+// console.log(arrWithNoDuplicates); // Output: [ 1, 2, 3, 4 ]
+
+// 23. Spreading an array as an argument:
+let numberArray = [1, 2, 3, 4, 5];
+let minNumFromNumberArray = Math.min(...numberArray);
+// console.log(minNumFromNumberArray); // Output: 1
+
+// 24. Convert a string to characters using the spread operator:
+let string = "Hello";
+let stringConvertedToArr = [...string];
+// console.log(stringConvertedToArr); // Output: [ 'H', 'e', 'l', 'l', 'o' ]
