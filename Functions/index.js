@@ -3,7 +3,6 @@
 // - Loop through the string and check if the characters and the string's characters are duplicated more than once. Return the character.
 const firstNonRepeatedCharacter = function (string) {
   let chars = string.split("");
-
   for (let i = 0; i < string.length; i++) {
     if (
       chars.filter(function (j) {
@@ -26,3 +25,13 @@ const missingNumber = Array.from(Array(max - min), (v, i) => i + min).filter(
   (i) => !arr.includes(i)
 );
 // console.log(missingNumber); // Output: [ 2, 4, 6, 8 ]
+
+// 3. (* Check if two strings are a rotation of each other *)
+// - Using repeat to repeat the second string being passed as 'rotated' twice and checking if the first string passed as 'string' is included within this repetition
+function checkRotationStrings(string, rotated) {
+  return string.length === rotated.length && rotated.repeat(2).includes(string);
+}
+console.log(checkRotationStrings("apple", "elppa")); // Output: false
+console.log(checkRotationStrings("apple", "leapp")); // Output: true
+console.log(checkRotationStrings("hello", "lohel")); // Output: true
+console.log(checkRotationStrings("hello", "ohell")); // Output: true
