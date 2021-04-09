@@ -117,3 +117,8 @@ let arrayCheckedUsingInclude = checkArrayUsingInclude.includes(3);
 const findIndexOfArray = [1, 2, 3, 4, 5];
 let foundIndex = findIndexOfArray.indexOf(3);
 // console.log(foundIndex); // Output: 2
+
+// 20. Copy array using the spread operator:
+let arrToBeCopied = [1, 2, 3];
+let newCopiedArray = [...arrToBeCopied];
+// console.log(newCopiedArray); // Output: [ 1, 2, 3 ]
