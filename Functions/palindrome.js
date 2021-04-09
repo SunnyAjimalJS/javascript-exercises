@@ -1,14 +1,13 @@
+// (* One way *) //
+// - Detect if string is a permutation of a palindrome
+// - Palindrome (even) all letters have 2 iterations
+// - Palindrome (odd) all letters have 2 iterations, only 1 letter has 1 iteration
 function palindromePermutation(s) {
-  // Detect if string is a permutation of a palindrome
-  // palindrome (even) all letters have 2 iterations
-  // palindrome (odd) all letters have 2 iterations, only 1 letter has 1 iteration
   let map = {};
   s = s.replace(/\s/g, "").toLowerCase();
-
   for (let letter of s) {
     map[letter] > 0 ? map[letter]++ : (map[letter] = 1);
   }
-
   var count = 0;
   for (let key in map) {
     if (map[key] % 2 !== 0) {
@@ -23,23 +22,20 @@ function palindromePermutation(s) {
 // console.log(palindromePermutation("rcaerca")); // Output: true
 
 // (* A different way *) //
+// - Create a set to track characters
+// - Iterate over each character by spitting into an array
+// - Remove from set if previously added
+// - Add to set if not already present in set
+// - Set should have 0 or 1 entry if is a palindrome
 function palindromePermutation(inputString) {
-  // create a set to track characters we've seen
   const charSet = new Set();
-
-  // iterate over each character by spitting into an array
   inputString.split("").forEach((char) => {
-    // remove from set if previously added
     if (charSet.has(char)) {
       charSet.delete(char);
-
-      // add to set if not already present in set
     } else {
       charSet.add(char);
     }
   });
-
-  // set should have 0 or 1 entry if is a palindrome
   return charSet.size <= 1;
 }
 // console.log(palindromePermutation("rcaerca")); // Output: true
@@ -60,3 +56,19 @@ function isPalindrome(s) {
 // console.log(isPalindrome("level")); // Output: true
 // console.log(isPalindrome("hello")); // Output: false
 // console.log(isPalindrome("pop")); // Output: true
+
+// (* A different way using Regex *) //
+// - Set regex pattern which will be used to check characters
+// - Convert the string to lowercase and use replace to pass the regex pattern
+// - Reverse the lowercase string using split(), reverse() and join("")
+// - Return will check if the reversed string is the same as the original lowercase and return a boolean
+function palindromeCheck(str) {
+  re = /[^A-Za-z0-9]/g;
+  let lowCaseRegStr = str.toLowerCase().replace(re, "");
+  let reverseStr = lowCaseRegStr.split("").reverse().join("");
+  return reverseStr === lowCaseRegStr;
+}
+console.log(palindromeCheck("Mary, Army")); // Output: false
+console.log(palindromeCheck("Kayak")); // Output: true
+console.log(palindromeCheck("8008, 8008")); // Output: true
+console.log(palindromeCheck("8008, 8018")); // Output: false
