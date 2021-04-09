@@ -68,7 +68,7 @@ function palindromeCheck(str) {
   let reverseStr = lowCaseRegStr.split("").reverse().join("");
   return reverseStr === lowCaseRegStr;
 }
-console.log(palindromeCheck("Mary, Army")); // Output: false
-console.log(palindromeCheck("Kayak")); // Output: true
-console.log(palindromeCheck("8008, 8008")); // Output: true
-console.log(palindromeCheck("8008, 8018")); // Output: false
+// console.log(palindromeCheck("Mary, Army")); // Output: false
+// console.log(palindromeCheck("Kayak")); // Output: true
+// console.log(palindromeCheck("8008, 8008")); // Output: true
+// console.log(palindromeCheck("8008, 8018")); // Output: false
