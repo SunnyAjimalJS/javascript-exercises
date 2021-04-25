@@ -105,8 +105,8 @@ let itemFromArrayUsingFind = arrayToFindFrom.find((val) => val > 7);
 
 // 17. Flat & use Infinity:
 const arrayToFlatten = [1, [2, [3, [4]]]];
-let flattenedArray = arrayToFlatten.flat(Infinity);
-// console.log(flattenedArray); // Output: [ 1, 2, 3, 4 ]
+let flatArray = arrayToFlatten.flat(Infinity);
+// console.log(flatArray); // Output: [ 1, 2, 3, 4 ]
 
 // 18. Using flatMap to flatten an array to single elements:
 const input = ["blue, red, yellow", "apple, orange"];
@@ -148,3 +148,25 @@ let minNumFromNumberArray = Math.min(...numberArray);
 let string = "Hello";
 let stringConvertedToArr = [...string];
 // console.log(stringConvertedToArr); // Output: [ 'H', 'e', 'l', 'l', 'o' ]
+
+// 26. (* Find the largest and smallest number in an unsorted integer array*) //
+// - Sort the numbers in order first using slice() and sort() on the array
+// - The compare function can subtract b from a. This will sort the array in ascending order (if it doesn't contain Infinity and NaN)
+// - Once the array is sorted, to find the smallest, need the 0 index - the first item in the array
+// - For largest, use length -1 to get the last item in the array which will be the largest number when it's sorted
+const unsortedNumberArray = [1, 3, 5, 12, 2, 4, 6, 8, 9, 7];
+
+let sorted = unsortedNumberArray.slice().sort(function (a, b) {
+  return a - b;
+});
+
+let smallest = sorted[0];
+let largest = sorted[sorted.length - 1];
+// console.log(sorted); // Output: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 12 ]
+// console.log(smallest); // Output: 1
+// console.log(largest); // Output: 12
+
+// 27. Reverse an array in place:
+const arrayToRev = [0, 1, 2, 3, 4];
+const reveresedArr = arrayToRev.reverse();
+console.log(reveresedArr); // Output: [ 4, 3, 2, 1, 0 ]
