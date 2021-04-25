@@ -58,3 +58,58 @@ const stringPermutations = (str) => {
 // console.log(stringPermutations("tree"));
 // console.log(stringPermutations("ab"));
 // console.log(stringPermutations("a"));
+
+// 5. (* Check if a string contains only digits using Regex and prototype *) /
+String.prototype.isNumber = function () {
+  return /^\d+$/.test(this);
+};
+// console.log("123123".isNumber()); // Output: true
+// console.log("ABC123".isNumber()); // Output: false
+
+// 6. (* Check if two strings are anagrams of each other *) //
+function isAnagram(stringA, stringB) {
+  // Remove any non-alphabet character using regex and convert the strings to lowercase
+  stringA = stringA.replace(/[^\w]/g, "").toLowerCase();
+  stringB = stringB.replace(/[^\w]/g, "").toLowerCase();
+  // Get the character map of both strings
+  const charMapA = getCharMap(stringA);
+  const charMapB = getCharMap(stringB);
+  // Next loop through each character in the charMapA, and check if it exists in charMapB and has the same value asin charMapA. If it does not, return false
+  for (let char in charMapA) {
+    if (charMapA[char] !== charMapB[char]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function getCharMap(string) {
+  // Define an empty object that will hold the key - value pairs.
+  let charMap = {};
+  //Loop through each character in the string. if the character already exists in the map, increase the value, otherwise add it to the map with a value of 1
+  for (let char of string) {
+    charMap[char] = charMap[char] + 1 || 1;
+  }
+  return charMap;
+}
+// console.log(isAnagram("dog", "god")); // Output: true
+// console.log(isAnagram("silent", "listen")); // Output: true
+// console.log(isAnagram("true", "tteur")); // Output: false
+
+// 7. (* Find the position of a word in a given sentence *) //
+function findWord(sentence) {
+  let num = 0;
+  let message = "";
+  const arr = sentence.split(" ");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "Ferrari") {
+      num = i + 1;
+      break;
+    }
+  }
+  message = num !== 0 ? `I found Ferrari at ${num}` : "I cant find Ferrari";
+  return message;
+}
+// console.log(findWord("There's a Ferrari")); // Output: I found Ferrari at 3
+// console.log(findWord("There's a Lamborghini")); // Output: I cant find Ferrari
+// console.log(findWord("There's a convertible Ferrari")); // Output: I found Ferrari at 4
