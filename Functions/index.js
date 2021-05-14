@@ -113,3 +113,17 @@ function findWord(sentence) {
 // console.log(findWord("There's a Ferrari")); // Output: I found Ferrari at 3
 // console.log(findWord("There's a Lamborghini")); // Output: I cant find Ferrari
 // console.log(findWord("There's a convertible Ferrari")); // Output: I found Ferrari at 4
+
+// 8. (* Write a function that creates an array of random, non-repeating numbers ordered randomly within a range of two stated numbers *) //
+
+function randomIntArrGenerator() {
+  let keys = {};
+  while (Object.keys(keys).length < 10) {
+    let num = Math.floor(Math.random() * (20 - 0) + 0);
+    keys[num] = true;
+  }
+  let randomIntArr = Object.keys(keys).map((num) => parseInt(num));
+  let shuffledArr = randomIntArr.sort(() => Math.random() - 0.5);
+  return shuffledArr;
+}
+// console.log(randomIntArrGenerator()); // Output: [ 18, 9, 19, 1, 13, 15, 2, 10, 5, 17 ]
