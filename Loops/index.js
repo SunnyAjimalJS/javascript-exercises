@@ -69,20 +69,3 @@ function findDuplicateNumbers(numberArray) {
 // console.log(findDuplicateNumbers([1, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 7, 8])); // Output: [ '3', '5', '6' ]
 // console.log(findDuplicateNumbers([1, 2, 2, 3])); // Output: [ '2' ]
 // console.log(findDuplicateNumbers([1, 2])); // Output: []
-
-// 3. (* Find the largest and smallest number in an unsorted integer array*) //
-// - Sort the numbers in order first using slice() and sort() on the array
-// - The compare function can subtract b from a. This will sort the array in ascending order (if it doesn't contain Infinity and NaN)
-// - Once the array is sorted, to find the smallest, need the 0 index - the first item in the array
-// - For largest, use length -1 to get the last item in the array which will be the largest number when it's sorted
-const unsortedNumberArray = [1, 3, 5, 12, 2, 4, 6, 8, 9, 7];
-
-let sorted = unsortedNumberArray.slice().sort(function (a, b) {
-  return a - b;
-});
-
-let smallest = sorted[0];
-let largest = sorted[sorted.length - 1];
-// console.log(sorted); // Output: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 12 ]
-// console.log(smallest); // Output: 1
-// console.log(largest); // Output: 12
