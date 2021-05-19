@@ -42,6 +42,12 @@ let slicedArray = arrayToSlice.slice(1, 2);
 const arrayToMap = [1, 4, 9, 16];
 let mappedArray = arrayToMap.map((x) => x * 2);
 // console.log(mappedArray); // Output: [ 2, 8, 18, 32 ]
+let marks = [53, 29, 65, 22, 71];
+let passedMarks = [];
+marks.map((val) => {
+  if (val > 30) passedMarks.push(val);
+});
+// console.log(passedMarks); // Output: [ 53, 65, 71]
 
 // 8. Tostring - the toString() method converts an array to a string and returns the result:
 const arrayToBeConverted = ["Array", "To", "String"];
