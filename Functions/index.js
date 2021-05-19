@@ -115,7 +115,6 @@ function findWord(sentence) {
 // console.log(findWord("There's a convertible Ferrari")); // Output: I found Ferrari at 4
 
 // 8. (* Write a function that creates an array of random, non-repeating numbers ordered randomly within a range of two stated numbers *) //
-
 function randomIntArrGenerator() {
   let keys = {};
   while (Object.keys(keys).length < 10) {
@@ -127,3 +126,9 @@ function randomIntArrGenerator() {
   return shuffledArr;
 }
 // console.log(randomIntArrGenerator()); // Output: [ 18, 9, 19, 1, 13, 15, 2, 10, 5, 17 ]
+
+// 9. (* Write a function that returns the sum of two or more given numbers *) //
+const sumOfNumbers = (...numbers) =>
+  numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+// console.log(sumOfNumbers(1, 2, 3)); // Output: 6
