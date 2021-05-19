@@ -102,6 +102,9 @@ let filteredArray = arrayToFiler.filter((val) => val >= 5);
 const arrayToFindFrom = [1, 2, 5, 6, 7, 10];
 let itemFromArrayUsingFind = arrayToFindFrom.find((val) => val > 7);
 // console.log(itemFromArrayUsingFind); // Output: 10
+let scoreArr = [55, 77, 82, 66, 48];
+let value = scoreArr.find((val) => val > 75);
+// console.log(value); // Output:
 
 // 17. Flat & use Infinity:
 const arrayToFlatten = [1, [2, [3, [4]]]];
@@ -121,7 +124,9 @@ let arrayCheckedUsingInclude = checkArrayUsingInclude.includes(3);
 // 20. IndexOf:
 const findIndexOfArray = [1, 2, 3, 4, 5];
 let foundIndex = findIndexOfArray.indexOf(3);
+let valueUsingFind = findIndexOfArray.findIndex((val) => val > 2);
 // console.log(foundIndex); // Output: 2
+// console.log(valueUsingFind); // Output: 2
 
 // 21. Copy array using the spread operator:
 let arrToBeCopied = [1, 2, 3];
@@ -169,4 +174,4 @@ let largest = sorted[sorted.length - 1];
 // 27. Reverse an array in place:
 const arrayToRev = [0, 1, 2, 3, 4];
 const reveresedArr = arrayToRev.reverse();
-console.log(reveresedArr); // Output: [ 4, 3, 2, 1, 0 ]
+// console.log(reveresedArr); // Output: [ 4, 3, 2, 1, 0 ]
